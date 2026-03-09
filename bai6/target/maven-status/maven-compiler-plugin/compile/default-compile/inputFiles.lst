@@ -1,0 +1,16 @@
+C:\Users\HP\Desktop\bai4\src\main\java\com\example\bai4\Bai4Application.java
+C:\Users\HP\Desktop\bai4\src\main\java\com\example\bai4\config\DataInitializer.java
+C:\Users\HP\Desktop\bai4\src\main\java\com\example\bai4\config\SecurityConfig.java
+C:\Users\HP\Desktop\bai4\src\main\java\com\example\bai4\controller\HomeController.java
+C:\Users\HP\Desktop\bai4\src\main\java\com\example\bai4\controller\ProductController.java
+C:\Users\HP\Desktop\bai4\src\main\java\com\example\bai4\model\Account.java
+C:\Users\HP\Desktop\bai4\src\main\java\com\example\bai4\model\Category.java
+C:\Users\HP\Desktop\bai4\src\main\java\com\example\bai4\model\Product.java
+C:\Users\HP\Desktop\bai4\src\main\java\com\example\bai4\model\Role.java
+C:\Users\HP\Desktop\bai4\src\main\java\com\example\bai4\repository\AccountRepository.java
+C:\Users\HP\Desktop\bai4\src\main\java\com\example\bai4\repository\CategoryRepository.java
+C:\Users\HP\Desktop\bai4\src\main\java\com\example\bai4\repository\ProductRepository.java
+C:\Users\HP\Desktop\bai4\src\main\java\com\example\bai4\repository\RoleRepository.java
+C:\Users\HP\Desktop\bai4\src\main\java\com\example\bai4\service\AccountService.java
+C:\Users\HP\Desktop\bai4\src\main\java\com\example\bai4\service\CategoryService.java
+C:\Users\HP\Desktop\bai4\src\main\java\com\example\bai4\service\ProductService.java

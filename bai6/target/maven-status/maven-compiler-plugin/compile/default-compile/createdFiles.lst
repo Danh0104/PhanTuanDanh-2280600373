@@ -1,0 +1,16 @@
+com\example\bai4\repository\AccountRepository.class
+com\example\bai4\config\DataInitializer.class
+com\example\bai4\model\Role.class
+com\example\bai4\repository\RoleRepository.class
+com\example\bai4\config\SecurityConfig.class
+com\example\bai4\repository\CategoryRepository.class
+com\example\bai4\service\CategoryService.class
+com\example\bai4\controller\ProductController.class
+com\example\bai4\Bai4Application.class
+com\example\bai4\model\Category.class
+com\example\bai4\service\AccountService.class
+com\example\bai4\repository\ProductRepository.class
+com\example\bai4\controller\HomeController.class
+com\example\bai4\model\Account.class
+com\example\bai4\model\Product.class
+com\example\bai4\service\ProductService.class
