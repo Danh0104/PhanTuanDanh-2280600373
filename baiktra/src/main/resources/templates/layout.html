@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Course System</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        body{
+            background:#eef2f7;
+        }
+
+        .topbar{
+            background:#1f2937;
+            padding:12px 0;
+        }
+
+        .topbar a{
+            color:white;
+            text-decoration:none;
+            margin-right:15px;
+            font-weight:500;
+        }
+
+        .search-box{
+            width:350px;
+        }
+
+        .course-card{
+            border:none;
+            border-radius:10px;
+            overflow:hidden;
+            transition:0.3s;
+            box-shadow:0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .course-card:hover{
+            transform:scale(1.02);
+        }
+
+        .course-card img{
+            height:200px;
+            object-fit:cover;
+        }
+
+        .btn-main{
+            background:#2563eb;
+            color:white;
+            border:none;
+        }
+
+        .btn-main:hover{
+            background:#1e40af;
+        }
+
+        footer{
+            background:#1f2937;
+            color:white;
+            margin-top:50px;
+            padding:20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+    <div class="container d-flex justify-content-between align-items-center">
+
+        <div>
+            <a th:href="@{/home}">
+                <strong>Student Course System</strong>
+            </a>
+
+            <a th:href="@{/home}">Home</a>
+
+            <a th:href="@{/enroll/my-courses}" sec:authorize="hasRole('STUDENT')">
+                My Courses
+            </a>
+
+            <a th:href="@{/admin/courses}" sec:authorize="hasRole('ADMIN')">
+                Admin Panel
+            </a>
+        </div>
+
+        <div class="d-flex align-items-center">
+
+            <!-- SEARCH -->
+
+            <form class="d-flex me-3 search-box" th:action="@{/search}" method="get">
+                <input class="form-control me-2"
+                       type="search"
+                       name="keyword"
+                       placeholder="Search course..."
+                       th:value="${keyword}">
+                <button class="btn btn-light">Search</button>
+            </form>
+
+            <!-- LOGIN -->
+
+            <a th:href="@{/login}" sec:authorize="!isAuthenticated()">Login</a>
+
+            <a th:href="@{/register}" sec:authorize="!isAuthenticated()">Register</a>
+
+            <!-- USER -->
+
+            <span class="text-white me-2" sec:authorize="isAuthenticated()">
+                Hello, <span sec:authentication="name"></span>
+            </span>
+
+            <!-- LOGOUT -->
+
+            <form th:action="@{/logout}" method="post" sec:authorize="isAuthenticated()">
+                <button class="btn btn-sm btn-danger">Logout</button>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- CONTENT -->
+
+<div class="container mt-4" th:fragment="content">
+
+    <div th:replace="~{::main-content}"></div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer class="text-center">
+    <p>Student Course Registration System © 2026</p>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
